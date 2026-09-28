@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #172033;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-box,
+.invoice {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    background: #172033;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.invoice-header p {
+    color: #666;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f1f4f8;
+}
+
+.summary {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.summary h2 {
+    border-top: 2px solid #172033;
+    padding-top: 12px;
+}
+
+.print-btn {
+    background: #4f6bed;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .invoice-header {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .form-box,
+    .subtitle,
+    h1,
+    .print-btn {
+        display: none;
+    }
+
+    .invoice {
+        box-shadow: none;
+    }
+}
